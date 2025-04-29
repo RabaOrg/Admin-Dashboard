@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Login from "../pages/auth/login"
+
 import Adminlayout from "../components/layout/admin-layout";
 import Dashboard from "../pages/dashboard";
 import Customer from "../pages/dashboard/customer";
@@ -27,6 +28,7 @@ import ViewProductDetails from "../pages/product/viewProductDetails";
 import SingleApplication from "../pages/dashboard/application/viewsingleapplication";
 import CategoryDashboard from "../pages/dashboard/category";
 import PaymentOrder from "../pages/dashboard/payment/paymentOrder";
+import BulkPoductUpload from "../pages/product/bulkUpload/bulkUpload";
 
 
 
@@ -142,6 +144,11 @@ export const router = createBrowserRouter([
             {
                 path: "/payment_orders",
                 element: <PaymentOrder />
+
+            },
+            {
+                path: "/product_bulkupload",
+                element: <BulkPoductUpload />
 
             },
             { path: "/order_summary/:id", element: <ViewOrderSummary /> },

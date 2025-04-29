@@ -8,6 +8,20 @@ export const handleMetaProduct = async (page , perPage, search ) => {
   const { data } = await axiosInstance.get(`admin/products?page=${page}&perPage=${perPage}`);
   return data;
 }
+export const handleProductBulk = async () => {
+  const { data } = await axiosInstance.get(`/admin/products/download`, {
+    responseType: 'blob',  
+  });
+  return data;
+};
+export const handleProductBulkImages = async (formInfo) => {
+  return axiosInstance.post(`/admin/bulk-upload-images`, formInfo);
+ 
+}
+export const handleProductEditBulk = async (url, formInfo) => {
+  return axiosInstance.put(url, formInfo);
+ 
+}
 
 
 export const handleCreateProduct = async (formInfo) => {
@@ -23,6 +37,11 @@ export const handleUpdateProduct = async (formInfo) => {
     formInfo
   );
 };
+
+export const handleBulkProduct = async (url, formInfo) => {
+  return axiosInstance.post(url, formInfo);
+};
+
 export const handleDeleteProduct = async (id, productId) => {
   return axiosInstance.delete(
    `/admin/products/${id}/attachments/${productId}`,

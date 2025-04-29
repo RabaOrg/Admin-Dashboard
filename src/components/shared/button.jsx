@@ -73,8 +73,8 @@ Button.propTypes = {
     size: PropTypes.oneOf(["sm", "md", "lg"]),
     disabled: PropTypes.bool,
     icon: PropTypes.elementType,
-    loading: PropTypes.bool,  // Added loading prop validation
-    type: PropTypes.oneOf(["button", "submit", "reset"]),  // Added type prop to specify form behavior
+    loading: PropTypes.bool,
+    type: PropTypes.oneOf(["button", "submit", "reset"]),
 };
 
 export default Button;
