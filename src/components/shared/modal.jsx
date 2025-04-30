@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, title }) => {
   return (
     <>
 
@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">Modal Title</h2>
+              <h2 className="text-xl font-bold">{title}</h2>
               <button
                 className="text-gray-500 hover:text-gray-700"
                 onClick={onClose}

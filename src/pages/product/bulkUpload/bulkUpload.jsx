@@ -283,7 +283,7 @@ export default function BulkProductUpload() {
           <h4 className="text-lg font-semibold">Product Management</h4>
           <div className="space-x-2">
             <button onClick={() => setShowBulkModal(true)} className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded">
-              Bulk Upload
+              Upload Bulk Product
             </button>
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded"
@@ -307,7 +307,7 @@ export default function BulkProductUpload() {
               <BiUpload className="text-sm" />Upload Images
             </button>
             <button onClick={() => setShowBulkEditModal(true)} className="border border-blue-500 text-blue-500 text-sm hover:bg-blue-50 rounded p-1 flex gap-2 pt-2">
-              <BiDownload className="text-sm" />Upload Edited Template
+              <BiDownload className="text-sm" />Upload Edited Product
             </button>
 
           </div>
@@ -434,7 +434,7 @@ export default function BulkProductUpload() {
       </div>
 
 
-      <Modal isOpen={showBulkModal} onClose={() => setShowBulkModal(false)} title="Upload Products via Excel">
+      <Modal isOpen={showBulkModal} onClose={() => setShowBulkModal(false)} title="Upload Bulk Products">
         <div className="flex flex-col space-y-4">
           <input
             type="file"
@@ -449,7 +449,8 @@ export default function BulkProductUpload() {
           />
         </div>
       </Modal>
-      <Modal isOpen={showBulkEditModal} onClose={() => setShowBulkEditModal(false)} title="Upload Products via Excel">
+      <Modal isOpen={showBulkEditModal} onClose={() => setShowBulkEditModal(false)} title="Upload Edited Bulk Products">
+
         <div className="flex flex-col space-y-4">
           <input
             type="file"
@@ -457,6 +458,8 @@ export default function BulkProductUpload() {
             onChange={handleExcelChanges}
             className="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
           />
+          <p className="text-red-500 text-xs">Kindly note that once an edited product is uploaded, it will automatically replace the previous version.</p>
+
           <Button
             onClick={uploadEditedExcel}
             label={excelEditFile ? `Upload "${excelEditFile.name}"` : "Select a file"}
