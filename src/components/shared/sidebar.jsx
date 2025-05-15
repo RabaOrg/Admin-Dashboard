@@ -30,6 +30,7 @@ const SidebarComponent = ({ isOpen, toggleSidebar }) => {
         { name: "Category", icon: <Icons.Category />, path: "/category" },
         { name: "Payment Order Summary", icon: <Icons.Category />, path: "/payment_orders" },
         { name: "Bulk Upload", icon: <Icons.RepaymentPlan />, path: "/product_bulkupload" },
+        { name: "Settings", icon: <Icons.RepaymentPlan />, path: "/settings" },
 
 
     ];

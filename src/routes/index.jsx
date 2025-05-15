@@ -29,6 +29,7 @@ import SingleApplication from "../pages/dashboard/application/viewsingleapplicat
 import CategoryDashboard from "../pages/dashboard/category";
 import PaymentOrder from "../pages/dashboard/payment/paymentOrder";
 import BulkPoductUpload from "../pages/product/bulkUpload/bulkUpload";
+import Settings from "../pages/settings/setting";
 
 
 
@@ -64,6 +65,11 @@ export const router = createBrowserRouter([
             {
                 path: "/repayment-plan",
                 element: <RepaymentMainPlan />
+
+            },
+            {
+                path: "/settings",
+                element: <Settings />
 
             },
             {

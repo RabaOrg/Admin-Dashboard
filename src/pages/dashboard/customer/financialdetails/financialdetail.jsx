@@ -65,7 +65,7 @@ function FinancialDetails({ Id }) {
                 setDisplay(true)
             }
             localStorage.setItem('financialDetailsDisplay', JSON.stringify(true));
-            // query.invalidateQueries({ queryKey: ["customers"] })
+            // query.invalidateQueries({ queryKey: ["update"] })
         }, onError: (error) => {
             setisLoading(false)
             toast.error(error.message)
